@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: os
+name: vanguard
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -19,7 +19,7 @@ modules:
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
-      # - micro
+      - btop
       # - starship
     remove:
       # example: removing firefox (in favor of the flatpak)
@@ -35,6 +35,8 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
+        - io.github.zen_browser.zen
+        - org.mozilla.Thunderbird
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
@@ -43,6 +45,16 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
       # - org.gnome.eog
-
+  - type: gnome-extensions
+    install:
+      - Blur my Shell
+      - AppIndicator and KStatusNotifierItem Support
+    uninstall:
+      #- GSConnect # Uninstall step here should be used only for the extensions
+      # which are not installed through OS package manager in the base image,
+      # like extensions installed from gnome-extensions module
+  - type: bling
+    install:
+      - ublue-update # https://github.com/ublue-os/ublue-update
+      - dconf-update-service # a service unit that updates the dconf db on boot
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
