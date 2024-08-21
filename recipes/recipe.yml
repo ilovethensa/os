@@ -24,6 +24,8 @@ modules:
       - starship
       - fish
       - zed
+      - qemu
+      - qemu-kvm
     remove:
       - firefox
       - firefox-langpacks
@@ -43,6 +45,7 @@ modules:
       install:
         - io.github.zen_browser.zen
         - org.mozilla.Thunderbird
+        - com.mattjakeman.ExtensionManager
         # - org.mozilla.firefox
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
