@@ -1,0 +1,6 @@
+[org/gnome/shell]
+enabled-extensions=['background-logo@fedorahosted.org', 'blur-my-shell@aunetx', 'appindicatorsupport@rgcjonas.gmail.com']
+favorite-apps=['org.gnome.Nautilus.desktop', 'dev.zed.Zed.desktop', 'io.github.zen_browser.zen.desktop', 'org.gnome.Software.desktop']
+
+[org.gnome.desktop.interface]
+icon-theme='MoreWaita'
