@@ -31,6 +31,8 @@ modules:
       - adw-gtk3-theme
       - morewaita-icon-theme
       - grc
+      - exa
+      - bat
     remove:
       - firefox
       - firefox-langpacks
