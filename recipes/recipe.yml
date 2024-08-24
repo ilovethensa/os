@@ -27,7 +27,6 @@ modules:
       - zed
       - qemu
       - qemu-kvm
-      - virt-manager
       - adw-gtk3-theme
       - morewaita-icon-theme
       - grc
