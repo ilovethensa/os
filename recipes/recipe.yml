@@ -32,6 +32,7 @@ modules:
       - grc
       - exa
       - bat
+      - podman-compose
     remove:
       - firefox
       - firefox-langpacks
