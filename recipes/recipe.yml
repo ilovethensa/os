@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: os
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Personal vanguard OS!
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/sericea-main
